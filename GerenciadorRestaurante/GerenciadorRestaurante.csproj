@@ -47,7 +47,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adicionar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adicionar.Designer.cs">
+      <DependentUpon>Adicionar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cardapio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cardapio.Designer.cs">
+      <DependentUpon>Cardapio.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAOLogin.cs" />
+    <Compile Include="DAOProduto.cs" />
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +75,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Adicionar.resx">
+      <DependentUpon>Adicionar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>

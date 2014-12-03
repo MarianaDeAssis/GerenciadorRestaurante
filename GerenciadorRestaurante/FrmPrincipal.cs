@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using GerenciadorRestaurante;
 
 namespace Brazilian_Sound_Vinil
 {
@@ -36,6 +37,19 @@ namespace Brazilian_Sound_Vinil
         private void buscaToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void gerenciarCardápioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            for (int intIndex = Application.OpenForms.Count - 1; intIndex >= 0; intIndex--)
+            {
+                if (Application.OpenForms[intIndex] != this)
+                    Application.OpenForms[intIndex].Close();
+            }
+
+            Adicionar add = new Adicionar();
+            add.MdiParent = this;
+            add.Show();
         }
     }
 }
