@@ -31,6 +31,15 @@ namespace Brazilian_Sound_Vinil
 
         private void adicionarToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            for (int intIndex = Application.OpenForms.Count - 1; intIndex >= 0; intIndex--)
+            {
+                if (Application.OpenForms[intIndex] != this)
+                    Application.OpenForms[intIndex].Close();
+            }
+
+            Buscar add = new Buscar();
+            add.MdiParent = this;
+            add.Show();
 
         }
 

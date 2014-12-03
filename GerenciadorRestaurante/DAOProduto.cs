@@ -58,7 +58,7 @@ namespace GerenciadorRestaurante
 
         }
 
-        public void buscaVinil(DataGridView dgv, String nome)
+        public void buscaProduto(DataGridView dgv)
         {
             MySqlConnection con;
 
@@ -74,13 +74,13 @@ namespace GerenciadorRestaurante
 
                 DSet = new DataSet();
 
-                Adapter = new MySqlDataAdapter("SELECT idProduto,nome, descricao, preco, quantidade, FROM tbproduto WHERE nome = @nome ", con);
-                Adapter.SelectCommand.Parameters.AddWithValue("@nome", nome);
+                Adapter = new MySqlDataAdapter("SELECT * FROM tbproduto ", con);
+                
 
-                Adapter.Fill(DSet, "tbProduto");
+                Adapter.Fill(DSet, "tbproduto");
                 dgv.DataSource = DSet;
 
-                dgv.DataMember = "tbProduto";
+                dgv.DataMember = "tbproduto";
 
 
 

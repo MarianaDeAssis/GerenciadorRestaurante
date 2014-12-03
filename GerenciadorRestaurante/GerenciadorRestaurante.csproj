@@ -53,11 +53,11 @@
     <Compile Include="Adicionar.Designer.cs">
       <DependentUpon>Adicionar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cardapio.cs">
+    <Compile Include="Buscar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cardapio.Designer.cs">
-      <DependentUpon>Cardapio.cs</DependentUpon>
+    <Compile Include="Buscar.Designer.cs">
+      <DependentUpon>Buscar.cs</DependentUpon>
     </Compile>
     <Compile Include="DAOLogin.cs" />
     <Compile Include="DAOProduto.cs" />
@@ -77,6 +77,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Adicionar.resx">
       <DependentUpon>Adicionar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buscar.resx">
+      <DependentUpon>Buscar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
