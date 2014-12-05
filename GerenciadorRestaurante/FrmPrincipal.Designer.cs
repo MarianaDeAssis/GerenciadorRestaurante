@@ -1,4 +1,4 @@
-﻿namespace Brazilian_Sound_Vinil
+﻿namespace GerenciadorRestaurante
 {
     partial class FrmPrincipal
     {
@@ -32,6 +32,7 @@
             this.notasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adicionarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gerenciarCardápioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.notasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,7 +41,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.notasToolStripMenuItem,
             this.adicionarToolStripMenuItem,
-            this.gerenciarCardápioToolStripMenuItem});
+            this.gerenciarCardápioToolStripMenuItem,
+            this.notasToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(784, 24);
@@ -68,6 +70,13 @@
             this.gerenciarCardápioToolStripMenuItem.Size = new System.Drawing.Size(116, 20);
             this.gerenciarCardápioToolStripMenuItem.Text = "Adicionar Produto";
             this.gerenciarCardápioToolStripMenuItem.Click += new System.EventHandler(this.gerenciarCardápioToolStripMenuItem_Click);
+            // 
+            // notasToolStripMenuItem1
+            // 
+            this.notasToolStripMenuItem1.Name = "notasToolStripMenuItem1";
+            this.notasToolStripMenuItem1.Size = new System.Drawing.Size(50, 20);
+            this.notasToolStripMenuItem1.Text = "Notas";
+            this.notasToolStripMenuItem1.Click += new System.EventHandler(this.notasToolStripMenuItem1_Click);
             // 
             // FrmPrincipal
             // 
@@ -98,5 +107,6 @@
         private System.Windows.Forms.ToolStripMenuItem notasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adicionarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gerenciarCardápioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem notasToolStripMenuItem1;
     }
 }

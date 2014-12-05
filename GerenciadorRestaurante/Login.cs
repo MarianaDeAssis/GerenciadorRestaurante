@@ -10,14 +10,21 @@ using MySql.Data.MySqlClient;
 
 
 
-namespace Brazilian_Sound_Vinil
-{
+
+
+namespace GerenciadorRestaurante
+{   
+    
+
     public partial class Login : Form
     {
+        public String cod;
+
         public Login()
         {
             InitializeComponent();
         }
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -29,10 +36,19 @@ namespace Brazilian_Sound_Vinil
 
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+      
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogin_Click_1(object sender, EventArgs e)
         {
             //cria variavel da classe de ligacao com a tabela tdfuncionario no banco de dados ( DAOLogin )
-            DAOLogin login = new DAOLogin();
+            DAOFuncionario login = new DAOFuncionario();
+
+           
+
             //chamo o método já testando seu retorno
             //preenchendo os parâmetros necessários
             //se retorna true
@@ -40,6 +56,12 @@ namespace Brazilian_Sound_Vinil
             {
                 //retorno o diálogo ok
                 this.DialogResult = DialogResult.OK;
+                DAOFuncionario.Codigo = txtCod.Text;
+               
+     
+               
+                
+            
 
             }
             else
@@ -47,12 +69,10 @@ namespace Brazilian_Sound_Vinil
                 //Senão retorno o dialogo cancel por exemplo
                 this.DialogResult = DialogResult.Cancel;
             }
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
 
         }
+
+        
 
         //Método para validar usuário que recebe duas string
         //como parâmetros que será o usuario e senha

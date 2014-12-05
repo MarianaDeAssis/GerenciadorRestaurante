@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace Brazilian_Sound_Vinil
+namespace GerenciadorRestaurante
 {
     static class Program
     {
@@ -44,6 +44,8 @@ namespace Brazilian_Sound_Vinil
                     MessageBox.Show("Usuário ou Login inválidos!");
 
                 }
+
+               
 
 
             }

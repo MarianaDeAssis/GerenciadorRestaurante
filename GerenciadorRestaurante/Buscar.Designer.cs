@@ -35,6 +35,7 @@
             // 
             // dgvProduto
             // 
+            this.dgvProduto.AllowUserToResizeColumns = false;
             this.dgvProduto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
@@ -44,6 +45,7 @@
             this.dgvProduto.Name = "dgvProduto";
             this.dgvProduto.Size = new System.Drawing.Size(760, 323);
             this.dgvProduto.TabIndex = 3;
+            this.dgvProduto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduto_CellContentClick);
             // 
             // btnBuscar
             // 
@@ -78,7 +80,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvProduto;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.DataGridView dgvProduto;
     }
 }

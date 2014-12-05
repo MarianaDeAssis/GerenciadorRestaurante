@@ -41,9 +41,15 @@ namespace GerenciadorRestaurante
             
 
             DAOProduto busca = new DAOProduto();
-            busca.buscaProduto(dgvProduto); // daoVinil
+            busca.buscaProduto(dgvProduto); // daoProdutos
+
 
            
+        }
+
+        private void dgvProduto_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
        

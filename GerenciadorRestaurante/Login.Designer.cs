@@ -1,4 +1,4 @@
-﻿namespace Brazilian_Sound_Vinil
+﻿namespace GerenciadorRestaurante
 {
     partial class Login
     {
@@ -28,75 +28,67 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblCod = new System.Windows.Forms.Label();
-            this.lblSenha = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtCod = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // lblCod
+            // label1
             // 
-            this.lblCod.AutoSize = true;
-            this.lblCod.BackColor = System.Drawing.Color.Transparent;
-            this.lblCod.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold);
-            this.lblCod.Location = new System.Drawing.Point(323, 39);
-            this.lblCod.Name = "lblCod";
-            this.lblCod.Size = new System.Drawing.Size(72, 27);
-            this.lblCod.TabIndex = 0;
-            this.lblCod.Text = "Código:";
-            this.lblCod.Click += new System.EventHandler(this.label1_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(24, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "label1";
             // 
-            // lblSenha
+            // label2
             // 
-            this.lblSenha.AutoSize = true;
-            this.lblSenha.BackColor = System.Drawing.Color.Transparent;
-            this.lblSenha.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold);
-            this.lblSenha.Location = new System.Drawing.Point(313, 154);
-            this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(70, 27);
-            this.lblSenha.TabIndex = 1;
-            this.lblSenha.Text = "Senha:";
-            this.lblSenha.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.Location = new System.Drawing.Point(425, 244);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(95, 23);
-            this.btnLogin.TabIndex = 2;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(24, 67);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "label2";
             // 
             // txtCod
             // 
-            this.txtCod.Location = new System.Drawing.Point(318, 69);
+            this.txtCod.Location = new System.Drawing.Point(110, 23);
             this.txtCod.Name = "txtCod";
-            this.txtCod.Size = new System.Drawing.Size(292, 20);
-            this.txtCod.TabIndex = 4;
+            this.txtCod.Size = new System.Drawing.Size(100, 20);
+            this.txtCod.TabIndex = 2;
             // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(318, 184);
+            this.txtSenha.Location = new System.Drawing.Point(110, 59);
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.PasswordChar = '*';
-            this.txtSenha.Size = new System.Drawing.Size(292, 20);
-            this.txtSenha.TabIndex = 5;
+            this.txtSenha.Size = new System.Drawing.Size(100, 20);
+            this.txtSenha.TabIndex = 3;
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Location = new System.Drawing.Point(110, 156);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin.TabIndex = 4;
+            this.btnLogin.Text = "button1";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 361);
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtCod);
-            this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.lblSenha);
-            this.Controls.Add(this.lblCod);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Name = "Login";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sistema de Gerenciamento - Login";
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -105,10 +97,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblCod;
-        private System.Windows.Forms.Label lblSenha;
-        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCod;
         private System.Windows.Forms.TextBox txtSenha;
+        private System.Windows.Forms.Button btnLogin;
     }
 }

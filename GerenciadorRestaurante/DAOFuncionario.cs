@@ -4,15 +4,24 @@ using System.Linq;
 using System.Text;
 using MySql.Data.MySqlClient;
 
-namespace Brazilian_Sound_Vinil
+namespace GerenciadorRestaurante
 {
-    class DAOLogin
+    class DAOFuncionario
     {
+        private static string codigo = "";
+
+        public static string Codigo
+        {
+            get { return codigo; }
+            set { codigo = value; }
+        }
+        
         public bool validaUsuario(string usuario, string senha)
         {
             //variável que será testada para
             //informar o retorno
             int retorno = -1;
+      
             ////instância da conexão
             MySqlConnection conexao;
             conexao = new MySqlConnection("server=localhost;userid=root;password=;database=dbloja;");
@@ -34,6 +43,5 @@ namespace Brazilian_Sound_Vinil
             //retorno true se retorno for maior que zero
             return retorno > 0;
         }
-
     }
 }
