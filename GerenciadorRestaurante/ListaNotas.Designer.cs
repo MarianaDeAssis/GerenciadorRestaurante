@@ -72,6 +72,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Notas";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.ListaNotas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNotas)).EndInit();
             this.ResumeLayout(false);
 

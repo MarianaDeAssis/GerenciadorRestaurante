@@ -18,7 +18,28 @@ namespace GerenciadorRestaurante
 
         private void Adicionar_Load(object sender, EventArgs e)
         {
+            Login login = new Login();
+            Boolean resultado = false;
 
+            do
+            {
+
+
+                //Se o resultado do dialogo for ok
+                //ou seja se o usuario e login constarem no bd
+                if (login.ShowDialog() == DialogResult.OK)
+                {
+                    this.Show();
+                    resultado = true;
+                }
+
+                else
+                {
+                    //Se não mostro a mensagem
+                    MessageBox.Show("Usuário ou Login inválidos! A aplicação está bloqueada, chame um funcionário para a execução dos devidos procedimentos.");
+                }
+
+            } while (resultado == false);
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)

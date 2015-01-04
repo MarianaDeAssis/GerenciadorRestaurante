@@ -72,6 +72,11 @@ namespace GerenciadorRestaurante
 
         }
 
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
         
 
         //Método para validar usuário que recebe duas string

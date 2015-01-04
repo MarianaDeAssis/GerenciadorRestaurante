@@ -18,18 +18,12 @@ namespace GerenciadorRestaurante
         }
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
-        {
-
+        {  
+            
+            
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-
-
-        private void adicionarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void funcionárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             for (int intIndex = Application.OpenForms.Count - 1; intIndex >= 0; intIndex--)
             {
@@ -37,13 +31,29 @@ namespace GerenciadorRestaurante
                     Application.OpenForms[intIndex].Close();
             }
 
+            //abro o formulário principal
+            ListaNotas add = new ListaNotas();
+            add.MdiParent = this;
+            add.Show();
+            
+        }
+
+        private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            for (int intIndex = Application.OpenForms.Count - 1; intIndex >= 0; intIndex--)
+            {
+                if (Application.OpenForms[intIndex] != this)
+                    Application.OpenForms[intIndex].Close();
+            }
+
+            //abro o formulário principal
             Buscar add = new Buscar();
             add.MdiParent = this;
             add.Show();
 
         }
 
-        private void buscaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void cadastrarProdutosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             for (int intIndex = Application.OpenForms.Count - 1; intIndex >= 0; intIndex--)
             {
@@ -51,35 +61,15 @@ namespace GerenciadorRestaurante
                     Application.OpenForms[intIndex].Close();
             }
 
-            ListaNotas add = new ListaNotas();
-            add.MdiParent = this;
-            add.Show();
-        }
-
-        private void gerenciarCardápioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            for (int intIndex = Application.OpenForms.Count - 1; intIndex >= 0; intIndex--)
-            {
-                if (Application.OpenForms[intIndex] != this)
-                    Application.OpenForms[intIndex].Close();
-            }
-
+            //abro o formulário principal
             Adicionar add = new Adicionar();
             add.MdiParent = this;
             add.Show();
+
+
         }
 
-        private void notasToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            for (int intIndex = Application.OpenForms.Count - 1; intIndex >= 0; intIndex--)
-            {
-                if (Application.OpenForms[intIndex] != this)
-                    Application.OpenForms[intIndex].Close();
-            }
-
-            Notas add = new Notas();
-            add.MdiParent = this;
-            add.Show();
-        }
+        
+        
     }
 }

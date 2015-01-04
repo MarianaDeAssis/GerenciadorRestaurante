@@ -37,11 +37,11 @@ namespace GerenciadorRestaurante
         }
 
         private void btnBuscar_Click_1(object sender, EventArgs e)
-        {
+        {   
             
 
             DAOProduto busca = new DAOProduto();
-            busca.buscaProduto(dgvProduto); // daoProdutos
+            busca.buscaProduto(cblProdutos); // daoProdutos
 
 
            
@@ -50,6 +50,18 @@ namespace GerenciadorRestaurante
         private void dgvProduto_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnEnviar_Click(object sender, EventArgs e)
+        {
+            DAOProduto busca = new DAOProduto();
+
+            String pag, valor, data;
+            pag = txtForma.Text;
+            valor = txtValor.Text;
+            data = txtData.Text;
+
+            busca.vendaProduto(cblProdutos, pag, valor, data);
         }
 
        

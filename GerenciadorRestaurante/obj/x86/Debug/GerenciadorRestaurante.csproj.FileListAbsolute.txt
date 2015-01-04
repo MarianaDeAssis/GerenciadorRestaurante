@@ -11,7 +11,6 @@ C:\Users\Emanuelle Fonseca\documents\visual studio 2010\Projects\GerenciadorRest
 C:\Users\Emanuelle Fonseca\documents\visual studio 2010\Projects\GerenciadorRestaurante\GerenciadorRestaurante\obj\x86\Debug\GerenciadorRestaurante.csprojResolveAssemblyReference.cache
 C:\Users\Emanuelle Fonseca\documents\visual studio 2010\Projects\GerenciadorRestaurante\GerenciadorRestaurante\obj\x86\Debug\GerenciadorRestaurante.Adicionar.resources
 C:\Users\Emanuelle Fonseca\documents\visual studio 2010\Projects\GerenciadorRestaurante\GerenciadorRestaurante\obj\x86\Debug\GerenciadorRestaurante.Buscar.resources
-C:\Users\Emanuelle Fonseca\documents\visual studio 2010\Projects\GerenciadorRestaurante\GerenciadorRestaurante\obj\x86\Debug\GerenciadorRestaurante.Notas.resources
 C:\Users\Emanuelle Fonseca\documents\visual studio 2010\Projects\GerenciadorRestaurante\GerenciadorRestaurante\obj\x86\Debug\GerenciadorRestaurante.Login.resources
 C:\Users\Emanuelle Fonseca\documents\visual studio 2010\Projects\GerenciadorRestaurante\GerenciadorRestaurante\obj\x86\Debug\GerenciadorRestaurante.FrmPrincipal.resources
 C:\Users\Emanuelle Fonseca\documents\visual studio 2010\Projects\GerenciadorRestaurante\GerenciadorRestaurante\obj\x86\Debug\GerenciadorRestaurante.ListaNotas.resources

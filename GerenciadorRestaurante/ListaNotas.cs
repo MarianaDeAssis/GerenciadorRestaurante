@@ -20,32 +20,46 @@ namespace GerenciadorRestaurante
         {
             DAONotas notas = new DAONotas();
             notas.buscaNotas(dgvNotas); // daoNotas
-            DataGridViewComboBoxColumn cmb = new DataGridViewComboBoxColumn();
-
-            cmb.HeaderText = "Status";
-            cmb.Name = "cmb";
-            cmb.MaxDropDownItems = 2;
-            cmb.Items.Add("Utilizada");
-            cmb.Items.Add("Não utilizada");
-            dgvNotas.Columns.Add(cmb);
             
-
-    
-
-            
-            
-
-            
-
         }
 
         private void dgvNotas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
+
+         
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void ListaNotas_Load(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            Boolean resultado = false;
+
+            do
+            {
+
+
+                //Se o resultado do dialogo for ok
+                //ou seja se o usuario e login constarem no bd
+                if (login.ShowDialog() == DialogResult.OK)
+                {
+                    this.Show();
+                    resultado = true;
+                }
+
+                else
+                {
+                    //Se não mostro a mensagem
+                    MessageBox.Show("Usuário ou Login inválidos! A aplicação está bloqueada, chame um funcionário para a execução dos devidos procedimentos.");
+                }
+
+            } while (resultado == false);
 
         }
     }

@@ -33,12 +33,13 @@
             this.txtCod = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 31);
+            this.label1.Location = new System.Drawing.Point(24, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
@@ -47,7 +48,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 67);
+            this.label2.Location = new System.Drawing.Point(24, 121);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 1;
@@ -55,14 +56,14 @@
             // 
             // txtCod
             // 
-            this.txtCod.Location = new System.Drawing.Point(110, 23);
+            this.txtCod.Location = new System.Drawing.Point(110, 50);
             this.txtCod.Name = "txtCod";
             this.txtCod.Size = new System.Drawing.Size(100, 20);
             this.txtCod.TabIndex = 2;
             // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(110, 59);
+            this.txtSenha.Location = new System.Drawing.Point(110, 114);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(100, 20);
             this.txtSenha.TabIndex = 3;
@@ -77,11 +78,22 @@
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(266, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Funcionário, inicialize o sistema com seu login e senha.";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtCod);
@@ -102,5 +114,6 @@
         private System.Windows.Forms.TextBox txtCod;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Label label3;
     }
 }
