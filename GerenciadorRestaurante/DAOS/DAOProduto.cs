@@ -39,26 +39,7 @@ namespace GerenciadorRestaurante
 
         }
 
-        public void deletaProduto(String nome)
-        {
-            MySqlConnection conexao = new MySqlConnection("server=localhost;userid=root;password=;database=dbloja;");
-
-            conexao.Open();
-
-            MySqlCommand cmd = new MySqlCommand();
-            cmd.Connection = conexao;
-            cmd.CommandText = "delete from tbproduto WHERE nome = @nome ";
-            cmd.Parameters.AddWithValue("@nome", nome);
-            cmd.Prepare();
-            cmd.ExecuteNonQuery();
-            conexao.Close();
-
-            MessageBox.Show("Deletado com sucesso");
-
-
-        }
-
-        public void buscaProduto(DataGridView dgv)
+        public void buscaProduto(CheckedListBox cbl)
         {
             MySqlConnection con;
 
@@ -70,45 +51,63 @@ namespace GerenciadorRestaurante
             if (con.State == ConnectionState.Open)
             {
                 MySqlDataAdapter Adapter;
-                DataSet DSet;
-
-                DSet = new DataSet();
-
-                Adapter = new MySqlDataAdapter("SELECT * FROM tbproduto ", con);
                 
+                DataSet DSet;
+                DSet = new DataSet();
+                DataRow row = null;
+                int i= 0;
+               
 
+                Adapter = new MySqlDataAdapter("SELECT nome FROM tbproduto ", con);
+         
                 Adapter.Fill(DSet, "tbproduto");
-                dgv.DataSource = DSet;
+                cbl.Items.Clear();
+               
+                foreach (DataRow col in DSet.Tables["tbproduto"].Rows)
+                {
+                    row = col;
+                    cbl.Items.Add(DSet.Tables["tbproduto"].Rows[i][0]);
 
-                dgv.DataMember = "tbproduto";
+                    i++;
 
+                   
+
+
+                }
 
 
             }
         }
 
-        public void vendaVinil(String id, DataTable tupla)
+        public void vendaProduto(CheckedListBox cbl, String pag, String val, String data)
         {
 
-            String conectar;
+            DAONotas nota = new DAONotas();
+            String pedido = null;
 
             MySqlConnection conexao = new MySqlConnection("server=localhost;userid=root;password=;database=dbloja;");
 
             conexao.Open();
 
-            MySqlCommand cmd = new MySqlCommand();
-            cmd.Connection = conexao;
-            conectar = "select * from tbProduto where idProduto = " + id;
 
-            MySqlDataAdapter mySqlDataAdapter;
-            mySqlDataAdapter = new MySqlDataAdapter(conectar, conexao);
-            DataSet DSet = new DataSet();
-            mySqlDataAdapter.Fill(DSet);
+            if (cbl.Items.Count > 0)
+            {
+                for (int i = 0; i <= cbl.CheckedItems.Count - 1; i++)
+                {
+                     pedido +=  cbl.CheckedItems[i].ToString() + "\n";
 
-            tupla.Merge(DSet.Tables[0]);
+                     MySqlCommand cmd = new MySqlCommand();
+                     cmd.Connection = conexao;
+                     
+            
 
-            conexao.Close();
 
+                   
+                }
+            }
+
+            nota.adicionaNota(pag, val, data, pedido);
+            
         }
 
 

@@ -10,7 +10,9 @@ namespace GerenciadorRestaurante
 {
     class DAONotas
     {
-        public void adicionaNota(String formaPg, String valor, String data)
+        
+
+        public void adicionaNota(String formaPg, String valor, String data, String descricao)
         {
             String codFunc = DAOFuncionario.Codigo;
             MySqlConnection conexao = new MySqlConnection("server=localhost;userid=root;password=;database=dbloja;");
@@ -19,11 +21,12 @@ namespace GerenciadorRestaurante
 
             MySqlCommand cmd = new MySqlCommand();
             cmd.Connection = conexao;
-            cmd.CommandText = "insert into tbnota (codFunc_fk, formaPg, valorTotal, dataVenda) values (@cod, @form, @val, @dat)";
+            cmd.CommandText = "insert into tbnota (codFunc_fk, formaPg, valorTotal, dataVenda, descricao) values (@cod, @form, @val, @dat, @desc)";
             cmd.Parameters.AddWithValue("@cod", codFunc);
             cmd.Parameters.AddWithValue("@form", formaPg);
             cmd.Parameters.AddWithValue("@val", valor);
             cmd.Parameters.AddWithValue("@dat", data);
+            cmd.Parameters.AddWithValue("@desc", descricao);
             cmd.Prepare();
             cmd.ExecuteNonQuery();
             conexao.Close();
@@ -52,7 +55,7 @@ namespace GerenciadorRestaurante
 
                
 
-                Adapter = new MySqlDataAdapter("Select idnota, formaPg, valorTotal, dataVenda from tbnota", con); 
+                Adapter = new MySqlDataAdapter("Select * from tbnota", con); 
     
                 Adapter.Fill(DSet, "tbnota");
                 dgv.DataSource = DSet;

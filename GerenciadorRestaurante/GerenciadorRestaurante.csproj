@@ -59,9 +59,9 @@
     <Compile Include="Buscar.Designer.cs">
       <DependentUpon>Buscar.cs</DependentUpon>
     </Compile>
-    <Compile Include="DAOFuncionario.cs" />
-    <Compile Include="DAONotas.cs" />
-    <Compile Include="DAOProduto.cs" />
+    <Compile Include="DAOS\DAOFuncionario.cs" />
+    <Compile Include="DAOS\DAONotas.cs" />
+    <Compile Include="DAOS\DAOProduto.cs" />
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,12 +80,6 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Notas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Notas.Designer.cs">
-      <DependentUpon>Notas.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Adicionar.resx">
@@ -102,9 +96,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Notas.resx">
-      <DependentUpon>Notas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
